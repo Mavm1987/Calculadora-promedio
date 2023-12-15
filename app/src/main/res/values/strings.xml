@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PROYECTO_12_09</string>
+    <string name="mensaje_no_asignaturas">No hay asignaturas almacenadas</string>
+    <string name="hint_spinner">Selecciona una opción</string>
+</resources>

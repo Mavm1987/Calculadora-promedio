@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:background="@color/black"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Calculador de promedios asignaturas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textAlignment="center"
+        android:padding="10dp"
+        android:textSize="20dp"
+        />
+
+    <TextView
+        android:paddingLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Agregue asignatura"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:paddingTop="20dp"
+        android:textSize="15dp"/>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        android:rowCount="1"
+        android:columnCount="2"
+        android:padding="5dp">
+
+        <EditText
+            android:id="@+id/asignatura"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:hint="ingrese el texto aqui"
+            android:inputType="text"
+            android:paddingLeft="25dp"
+            android:paddingTop="20dp"
+            android:textColor="@color/black"
+            android:textSize="15dp" />
+
+        <Button
+            android:id="@+id/guardarAsignatura"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="Agregar"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:backgroundTint="@color/blue"/>
+    </GridLayout>
+
+    <TextView
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Asignaturas almacenadas"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textSize="15dp"/>
+
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:rowCount="1"
+        android:columnCount="2"
+        android:padding="15dp">
+
+        <Spinner
+            android:id="@+id/asignaturasGuardadas"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:entries="@array/valoresArray"
+            android:gravity="center_vertical"
+            />
+
+
+
+        <Button
+            android:id="@+id/guardarNotas"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:backgroundTint="@color/blue"
+            android:padding="5dp"
+            android:text="Guardar Notas"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"/>
+    </GridLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:rowCount="3"
+        android:columnCount="2"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Nota 1"
+            android:textSize="17dp"
+            android:textAlignment="center"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/nota1"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+
+            android:inputType="text"
+
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Nota 2"
+            android:textSize="17dp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/nota2"
+            android:layout_width="150dp"
+            android:layout_height="37dp"
+            android:padding="10dp"
+
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Nota 3"
+            android:textSize="17dp"
+            android:textAlignment="center"
+            android:padding="10dp"
+            />
+
+        <EditText
+            android:id="@+id/nota3"
+            android:layout_width="150dp"
+            android:layout_height="38dp"
+
+
+            android:inputType="text"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="17dp" />
+    </GridLayout>
+
+
+    <Button
+        android:layout_margin="10dp"
+        android:id="@+id/calcularPromedio"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:padding="15dp"
+        android:text="Calcular Promedio"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/blue"
+
+        />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:padding="10dp"
+        android:rowCount="2">
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingLeft="25dp"
+            android:text="Tu promedio es "
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/resultado"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="20dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:paddingLeft="25dp"
+            android:text="Tu status "
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        mat<TextView
+            android:id="@+id/status"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </GridLayout>
+
+    <TextView
+        android:paddingLeft="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Miguel Angel Vivanco - seccion 341D"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="20dp"
+        android:textSize="15dp"
+        android:textAlignment="center"/>
+
+
+</LinearLayout>
